@@ -1,6 +1,8 @@
 import React from 'react';
 import InputField from '../components/InputField';
 import InputSelect from '../components/InputSelect';
+import GenreData from '../data/GenreData';
+import RatingData from '../data/RatingData';
 
 class SongInput extends React.Component {
     constructor() {
@@ -13,6 +15,8 @@ class SongInput extends React.Component {
         }
         this.handleTitleChange = this.handleTitleChange.bind(this)
         this.handleArtistChange = this.handleArtistChange.bind(this)
+        this.handleGenreChange = this.handleGenreChange.bind(this)
+        this.handleRatingChange = this.handleRatingChange.bind(this)
     }
 
     handleTitleChange(title) {
@@ -33,6 +37,24 @@ class SongInput extends React.Component {
         })
     }
 
+    handleGenreChange(name) {
+        console.log('SI genre:', name)
+        this.setState(() => {
+            return {
+                genre: name
+            }
+        })
+    }
+
+    handleRatingChange(value) {
+        console.log('SI rating:', value)
+        this.setState(() => {
+            return {
+                rating: value
+            }
+        })
+    }
+
     render() {
         return (
             <form>
@@ -48,8 +70,16 @@ class SongInput extends React.Component {
                     placeholder="voer artiest in"
                     onChange={this.handleArtistChange}
                 />
-                <InputSelect id="input-genre" />
-                <InputSelect id="input-rating" />
+                <InputSelect
+                    id="input-genre"
+                    options={GenreData}
+                    onChange={this.handleGenreChange}
+                />
+                <InputSelect
+                    id="input-rating"
+                    options={RatingData}
+                    onChange={this.handleRatingChange}
+                />
                 <button>Voeg toe</button>
             </form>
         )
