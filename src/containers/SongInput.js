@@ -1,7 +1,6 @@
 import React from 'react';
-import SongInput from './containers/SongInput'
 
-class Container extends React.Component {
+class SongInput extends React.Component {
     constructor() {
         super()
         this.state = {}
@@ -10,11 +9,10 @@ class Container extends React.Component {
     render() {
         return (
             <div>
-                <SongInput />
+                Songinput
             </div>
         )
     }
-
 }
 
-export default Container
+export default SongInput
