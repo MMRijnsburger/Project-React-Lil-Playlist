@@ -7,7 +7,7 @@ class InputSelect extends React.Component {
     }
 
     handleSelectChange(event) {
-        console.log(event.target.value)
+        // console.log(event.target.value)
         this.props.onChange(event.target.value)
     }
 

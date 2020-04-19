@@ -38,7 +38,7 @@ class SongInput extends React.Component {
     }
 
     handleGenreChange(name) {
-        console.log('SI genre:', name)
+        // console.log('SI genre:', name)
         this.setState(() => {
             return {
                 genre: name
@@ -47,7 +47,7 @@ class SongInput extends React.Component {
     }
 
     handleRatingChange(value) {
-        console.log('SI rating:', value)
+        // console.log('SI rating:', value)
         this.setState(() => {
             return {
                 rating: value
