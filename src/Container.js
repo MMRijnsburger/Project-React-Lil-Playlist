@@ -15,7 +15,7 @@ class Container extends React.Component {
         return (
             <div>
                 <SongInput />
-                <SongList />
+                <SongList list={this.state.songList} />
             </div>
         )
     }
