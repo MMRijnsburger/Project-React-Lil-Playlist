@@ -9,12 +9,24 @@ class Container extends React.Component {
         this.state = {
             songList: SongData
         }
+        this.handleSongInput = this.handleSongInput.bind(this)
+    }
+
+    handleSongInput(song) {
+        console.log(song)
+
+        //! TODO:
+        //! er voor zorgen dat song in songList geplaatst wordt.
+        //! 1: setState aanroepen en prevState gebruiken voor stap 2
+        //! 2: copy maken van songList uit prevState zie,  spread operator [...]
+        //! 3: song toevoegen aan copy van songList (push)
+        //! 4: return new songList als object..
     }
 
     render() {
         return (
             <div>
-                <SongInput />
+                <SongInput onSubmit={this.handleSongInput} />
                 <SongList list={this.state.songList} />
             </div>
         )

@@ -12,6 +12,9 @@ class InputSelect extends React.Component {
     }
 
     render() {
+        //! TODO:
+        //! initiele waarde op leeg??
+
         const options = this.props.options
             .map(option => {
                 return (
