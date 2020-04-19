@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const SongList = () => {
     return (
@@ -8,4 +8,4 @@ const SongList = () => {
     )
 }
 
-export default SongList
+export default SongList;

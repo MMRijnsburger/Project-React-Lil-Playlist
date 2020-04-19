@@ -1,6 +1,6 @@
 import React from 'react';
-import SongInput from './containers/SongInput'
-import SongList from './containers/SongList'
+import SongInput from './containers/SongInput';
+import SongList from './containers/SongList';
 
 class Container extends React.Component {
     constructor() {
@@ -19,4 +19,4 @@ class Container extends React.Component {
 
 }
 
-export default Container
+export default Container;

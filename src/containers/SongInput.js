@@ -15,4 +15,4 @@ class SongInput extends React.Component {
     }
 }
 
-export default SongInput
+export default SongInput;
