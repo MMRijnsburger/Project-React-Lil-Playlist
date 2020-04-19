@@ -1,7 +1,7 @@
 import React from 'react';
 import List from '../components/List/List';
 
-const SongList = () => {
+const SongList = (props) => {
     return (
         <div>
             Songlist
@@ -11,7 +11,7 @@ const SongList = () => {
                 <li>Genre</li>
                 <li>Rating</li>
             </ul>
-            <List />
+            <List items={props.list} />
         </div>
     )
 }
