@@ -4,7 +4,6 @@ import List from '../components/List/List';
 const SongList = (props) => {
     return (
         <div>
-            Songlist
             <ul>
                 <li>Song</li>
                 <li>Artist</li>

@@ -13,7 +13,6 @@ class List extends React.Component {
 
         return (
             <div>
-                List
                 <ul>
                     {listItems}
                 </ul>
