@@ -4,12 +4,10 @@ import List from '../components/List/List';
 const SongList = (props) => {
     return (
         <div>
-            <ul>
-                <li>Song</li>
-                <li>Artist</li>
-                <li>Genre</li>
-                <li>Rating</li>
-            </ul>
+            <span>Song </span>
+            <span>Artist </span>
+            <span>Genre </span>
+            <span>Rating </span>
             <List items={props.list} />
         </div>
     )
