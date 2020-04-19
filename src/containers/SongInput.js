@@ -1,4 +1,5 @@
 import React from 'react';
+import InputField from '../components/InputField';
 
 class SongInput extends React.Component {
     constructor() {
@@ -8,9 +9,11 @@ class SongInput extends React.Component {
 
     render() {
         return (
-            <div>
-                Songinput
-            </div>
+            <form>
+                <InputField id="input-title" />
+                <InputField id="input-artist" />
+                <button>Voeg toe</button>
+            </form>
         )
     }
 }
