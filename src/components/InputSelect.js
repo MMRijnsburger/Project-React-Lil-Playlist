@@ -1,16 +1,34 @@
 import React from 'react';
 
 class InputSelect extends React.Component {
-    constructor() {
-        super()
-        this.state = {}
+    constructor(props) {
+        super(props)
+        this.handleSelectChange = this.handleSelectChange.bind(this)
+    }
+
+    handleSelectChange(event) {
+        console.log(event.target.value)
+        this.props.onChange(event.target.value)
     }
 
     render() {
+        const options = this.props.options
+            .map(option => {
+                return (
+                    <option
+                        key={option.id}
+                        value={option.value}
+                    >
+                        {option.name}
+                    </option>)
+            })
         return (
-            <div>
-                input select
-            </div>
+            <select
+                id={this.props.id}
+                onChange={this.handleSelectChange}
+            >
+                {options}
+            </select>
         )
     }
 }
