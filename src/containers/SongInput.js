@@ -5,8 +5,8 @@ import GenreData from '../data/GenreData';
 import RatingData from '../data/RatingData';
 
 class SongInput extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             title: '',
             artist: '',
@@ -17,6 +17,7 @@ class SongInput extends React.Component {
         this.handleArtistChange = this.handleArtistChange.bind(this)
         this.handleGenreChange = this.handleGenreChange.bind(this)
         this.handleRatingChange = this.handleRatingChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     handleTitleChange(title) {
@@ -55,33 +56,54 @@ class SongInput extends React.Component {
         })
     }
 
+    handleSubmit() {
+        // console.log(this.state)
+
+        //! TODO:
+        //! song data valideren op juiste invulling
+        //! is niet null niet undefined enz..
+
+        this.props.onSubmit({
+            title: this.state.title,
+            artist: this.state.artist,
+            genre: this.state.genre,
+            rating: this.state.rating
+        })
+    }
+
     render() {
         return (
-            <form>
-                <InputField
-                    id="input-title"
-                    value={this.state.title}
-                    placeholder="voer titel in"
-                    onChange={this.handleTitleChange}
-                />
-                <InputField
-                    id="input-artist"
-                    value={this.state.artist}
-                    placeholder="voer artiest in"
-                    onChange={this.handleArtistChange}
-                />
-                <InputSelect
-                    id="input-genre"
-                    options={GenreData}
-                    onChange={this.handleGenreChange}
-                />
-                <InputSelect
-                    id="input-rating"
-                    options={RatingData}
-                    onChange={this.handleRatingChange}
-                />
-                <button>Voeg toe</button>
-            </form>
+            <div>
+                <form>
+                    <InputField
+                        id="input-title"
+                        value={this.state.title}
+                        placeholder="voer titel in"
+                        onChange={this.handleTitleChange}
+                    />
+                    <InputField
+                        id="input-artist"
+                        value={this.state.artist}
+                        placeholder="voer artiest in"
+                        onChange={this.handleArtistChange}
+                    />
+                    <InputSelect
+                        id="input-genre"
+                        options={GenreData}
+                        onChange={this.handleGenreChange}
+                    />
+                    <InputSelect
+                        id="input-rating"
+                        options={RatingData}
+                        onChange={this.handleRatingChange}
+                    />
+                </form>
+                <button
+                    type="submit" onClick={this.handleSubmit}
+                >
+                    Voeg toe
+                </button>
+            </div>
         )
     }
 }
