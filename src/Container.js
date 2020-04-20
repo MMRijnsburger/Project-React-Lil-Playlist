@@ -1,7 +1,8 @@
 import React from 'react';
 import SongInput from './containers/SongInput';
-import SongList from './containers/SongList';
+// import SongList from './containers/SongList';
 import SongData from './data/SongData';
+import TableList from './containers/TableList';
 
 class Container extends React.Component {
     constructor() {
@@ -27,7 +28,8 @@ class Container extends React.Component {
         return (
             <div>
                 <SongInput onSubmit={this.handleSongInput} />
-                <SongList list={this.state.songList} />
+                {/* <SongList list={this.state.songList} /> */}
+                <TableList list={this.state.songList} />
             </div>
         )
     }
