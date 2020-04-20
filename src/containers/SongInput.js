@@ -59,16 +59,27 @@ class SongInput extends React.Component {
     handleSubmit() {
         // console.log(this.state)
 
-        //! TODO:
-        //! song data valideren op juiste invulling
-        //! is niet null niet undefined enz..
+        if (this.state.title !== null &&
+            this.state.title !== undefined &&
+            this.state.title.length > 0 &&
+            this.state.artist !== null &&
+            this.state.artist !== undefined &&
+            this.state.artist.length > 0 &&
+            this.state.genre !== null &&
+            this.state.genre !== undefined &&
+            this.state.genre.length > 0 &&
+            this.state.rating !== null &&
+            this.state.rating !== undefined &&
+            this.state.rating !== 0
+        ) {
+            this.props.onSubmit({
+                title: this.state.title,
+                artist: this.state.artist,
+                genre: this.state.genre,
+                rating: this.state.rating
+            })
+        }
 
-        this.props.onSubmit({
-            title: this.state.title,
-            artist: this.state.artist,
-            genre: this.state.genre,
-            rating: this.state.rating
-        })
     }
 
     render() {
