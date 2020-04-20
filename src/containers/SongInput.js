@@ -78,6 +78,12 @@ class SongInput extends React.Component {
                 genre: this.state.genre,
                 rating: this.state.rating
             })
+            this.setState(() => {
+                return {
+                    title: '',
+                    artist: '',
+                }
+            })
         }
 
     }
