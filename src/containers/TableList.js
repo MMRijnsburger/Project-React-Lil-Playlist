@@ -13,7 +13,7 @@ const TableList = (props) => {
                 </tr>
             </thead>
 
-            <Table items={props.list} />
+            <Table items={props.list} onClick={props.onClick}/>
         </table>
     )
 }

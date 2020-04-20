@@ -11,10 +11,11 @@ class Container extends React.Component {
             songList: SongData
         }
         this.handleSongInput = this.handleSongInput.bind(this)
+        this.handleSongDelete = this.handleSongDelete.bind(this)
     }
 
     handleSongInput(song) {
-        // console.log(song)
+        console.log(song)
         this.setState(prevState => {
             const songList = [...prevState.songList]
             songList.push({
@@ -32,12 +33,29 @@ class Container extends React.Component {
 
     }
 
+    handleSongDelete(id) {
+        console.log(id)
+        this.setState(prevState => {
+            const songId = parseInt(id)
+            const currentSongList = [...prevState.songList]
+            const newSonglist = currentSongList.filter(item => {
+                return item.id !== songId
+            })
+            return {
+                songList: newSonglist
+            }
+        })
+    }
+
     render() {
         return (
             <div>
                 <SongInput onSubmit={this.handleSongInput} />
                 {/* <SongList list={this.state.songList} /> */}
-                <TableList list={this.state.songList} />
+                <TableList
+                    list={this.state.songList}
+                    onClick={this.handleSongDelete}
+                />
             </div>
         )
     }

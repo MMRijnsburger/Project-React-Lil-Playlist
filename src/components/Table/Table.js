@@ -8,6 +8,7 @@ class Table extends React.Component {
             <TableItem
                 key={item.id}
                 item={item}
+                onClick={this.props.onClick}
             />
         ))
 
