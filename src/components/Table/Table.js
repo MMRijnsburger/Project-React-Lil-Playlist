@@ -12,11 +12,9 @@ class Table extends React.Component {
         ))
 
         return (
-            <table>
-                <tbody>
-                    {tableItems}
-                </tbody>
-            </table>
+            <tbody>
+                {tableItems}
+            </tbody>
         )
     }
 }
