@@ -1,14 +1,14 @@
 const SongData = [
     {
         id: 1,
-        title: 'I\'m Yours',
+        title: 'You F*cking Did It',
         artist: 'Jason Mraz',
         genre: 'pop',
         rating: 5
     },
     {
         id: 2,
-        title: 'Have It All',
+        title: 'I\'m Yours',
         artist: 'Jason Mraz',
         genre: 'pop',
         rating: 4
