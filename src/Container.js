@@ -14,12 +14,15 @@ class Container extends React.Component {
     }
 
     handleSongInput(song) {
-        console.log(song)
+        // console.log(song)
         this.setState(prevState => {
             const songList = [...prevState.songList]
             songList.push({
                 id: songList.length + 1,
-                song: song
+                title: song.title,
+                artist: song.artist,
+                genre: song.genre,
+                rating: song.rating
             })
             return {
                 songList: songList
