@@ -28,8 +28,10 @@ class InputSelect extends React.Component {
         return (
             <select
                 id={this.props.id}
+                defaultValue="default"
                 onChange={this.handleSelectChange}
             >
+                <option value="default" disabled hidden>Kies...</option>
                 {options}
             </select>
         )
