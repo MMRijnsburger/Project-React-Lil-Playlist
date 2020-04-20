@@ -15,13 +15,18 @@ class Container extends React.Component {
 
     handleSongInput(song) {
         console.log(song)
+        this.setState(prevState => {
+            const songList = [...prevState.songList]
+            songList.push({
+                id: songList.length + 1,
+                song: song
+            })
+            return {
+                songList: songList
+            }
 
-        //! TODO:
-        //! er voor zorgen dat song in songList geplaatst wordt.
-        //! 1: setState aanroepen en prevState gebruiken voor stap 2
-        //! 2: copy maken van songList uit prevState zie,  spread operator [...]
-        //! 3: song toevoegen aan copy van songList (push)
-        //! 4: return new songList als object..
+        })
+
     }
 
     render() {
