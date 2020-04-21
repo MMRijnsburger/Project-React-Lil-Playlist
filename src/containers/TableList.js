@@ -16,13 +16,13 @@ const TableList = (props) => {
                     <th className="song-row_item">Genre
                     <InputSelect
                             options={GenreData}
-                            onChange={handleGenreChange}
+                            onSelectChange={props.onFilterGenre}
                         />
                     </th>
                     <th className="song-row_item">Rating
                     <InputSelect
                             options={RatingData}
-                            onChange={handleRatingChange}
+                            onSelectChange={props.onFilterRating}
                         />
                     </th>
                 </tr>
