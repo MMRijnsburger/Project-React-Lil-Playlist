@@ -27,8 +27,10 @@ const TableList = (props) => {
                     </th>
                 </tr>
             </thead>
-            <Table items={props.list} onClick={props.onClick} />
-
+            <Table
+                items={props.list}
+                onDelete={props.onSongDelete}
+            />
         </table>
     )
 }
