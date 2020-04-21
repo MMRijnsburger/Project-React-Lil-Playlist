@@ -12,12 +12,14 @@ class Container extends React.Component {
         }
         this.handleSongInput = this.handleSongInput.bind(this)
         this.handleSongDelete = this.handleSongDelete.bind(this)
+        this.handleFilterGenre = this.handleFilterGenre.bind(this)
+        this.handleFilterRating = this.handleFilterRating.bind(this)
     }
 
     handleSongInput(song) {
         console.log(song)
-        this.setState(prevState => {
-            const songList = [...prevState.songList]
+        this.setState(state => {
+            const songList = [...state.songList]
             songList.push({
                 id: songList.length + 1,
                 title: song.title,
@@ -35,14 +37,40 @@ class Container extends React.Component {
 
     handleSongDelete(id) {
         console.log(id)
-        this.setState(prevState => {
+        this.setState(state => {
             const songId = parseInt(id)
-            const currentSongList = [...prevState.songList]
-            const newSonglist = currentSongList.filter(item => {
+            const songlist = state.songList.filter(item => {
                 return item.id !== songId
             })
             return {
-                songList: newSonglist
+                songList: songlist
+            }
+        })
+    }
+
+    handleFilterGenre(genre) {
+        console.log(`handleFilterGenre(): genre=${genre}`)
+
+        this.setState(state => {
+            const songlist = state.songList.filter(item => {
+                return item.genre === genre
+            })
+            return {
+                songList: songlist
+            }
+        })
+    }
+
+    handleFilterRating(rating) {
+        console.log(`handleFilterRating(): rating=${rating}`)
+
+        this.setState(state => {
+            const songRating = parseInt(rating)
+            const songlist = state.songList.filter(item => {
+                return item.rating === songRating
+            })
+            return {
+                songList: songlist
             }
         })
     }
@@ -54,7 +82,9 @@ class Container extends React.Component {
                 {/* <SongList list={this.state.songList} /> */}
                 <TableList
                     list={this.state.songList}
-                    onClick={this.handleSongDelete}
+                    onSongDelete={this.handleSongDelete}
+                    onFilterGenre={this.handleFilterGenre}
+                    onFilterRating={this.handleFilterRating}
                 />
             </div>
         )
