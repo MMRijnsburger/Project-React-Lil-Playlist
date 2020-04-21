@@ -5,8 +5,6 @@ import GenreData from '../data/GenreData';
 import RatingData from '../data/RatingData';
 
 const TableList = (props) => {
-    const handleGenreChange = (genre) => { console.log('click genre', genre) }
-    const handleRatingChange = (rating) => { console.log('click rating', rating) }
     return (
         <table>
             <thead>
