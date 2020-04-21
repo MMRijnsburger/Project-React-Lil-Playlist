@@ -39,12 +39,11 @@ class Container extends React.Component {
         console.log(id)
         this.setState(state => {
             const songId = parseInt(id)
-            const currentSongList = [...state.songList]
-            const newSonglist = currentSongList.filter(item => {
+            const songlist = state.songList.filter(item => {
                 return item.id !== songId
             })
             return {
-                songList: newSonglist
+                songList: songlist
             }
         })
     }
@@ -65,6 +64,15 @@ class Container extends React.Component {
     handleFilterRating(rating) {
         console.log(`handleFilterRating(): rating=${rating}`)
 
+        this.setState(state => {
+            const songRating = parseInt(rating)
+            const songlist = state.songList.filter(item => {
+                return item.rating === songRating
+            })
+            return {
+                songList: songlist
+            }
+        })
     }
 
     render() {
