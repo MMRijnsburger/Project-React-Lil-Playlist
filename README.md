@@ -1,7 +1,6 @@
 # **Project React Lil Playlist**
 Winc Academy Project - Week 5: React Lil' Playlist
 
-Screenshot
 ![Screenshot](./images/Screenshot.png)
 
 Bekijk de live versie van de React Lil' Playlist: https://michelleslilplaylist.netlify.app/
