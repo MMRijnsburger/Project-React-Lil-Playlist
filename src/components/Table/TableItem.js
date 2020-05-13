@@ -20,6 +20,7 @@ class TableItem extends React.Component {
                 <td> {this.props.item.rating} </td>
                 <td>
                     <button
+                        className="delete-button"
                         value={this.props.item.id}
                         onClick={this.handleDelete}
                     >

@@ -116,6 +116,7 @@ class SongInput extends React.Component {
                     />
                 </form>
                 <button
+                    className="submit-button"
                     type="submit" onClick={this.handleSubmit}
                 >
                     Voeg toe
