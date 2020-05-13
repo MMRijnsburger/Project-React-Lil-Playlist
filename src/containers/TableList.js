@@ -23,6 +23,7 @@ const TableList = (props) => {
                             onSelectChange={props.onFilterRating}
                         />
                     </th>
+                    <th></th>
                 </tr>
             </thead>
             <Table

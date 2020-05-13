@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 .App {
-  text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #9E5163;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -11,4 +13,71 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  text-align: center;
+}
+
+.SongInput {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+/* input fields */
+
+input {
+  width: 250px;
+  height: 15px;
+  padding: 5px;
+  margin: 5px;
+}
+
+/* button */
+
+button {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  border: none;
+}
+
+/* select */
+
+select {
+  border: none;
+  border-radius: 2px;
+  background-color: #f1f1f1;
+  margin-left: 10px;
+  width: 75px;
+  height: 25px;
+}
+
+/* table */
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* table header */
+
+th {
+  border: 1px solid black;
+  background-color: #9E5163;
+  text-align: left;
+  color: white;
+  padding: 10px;
+}
+
+/* table row */
+
+tr {
+  background-color: #EFDCE0;
+}
+
+/* table data */
+
+td {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid black;
 }

@@ -90,7 +90,7 @@ class SongInput extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="SongInput">
                 <form>
                     <InputField
                         id="input-title"
