@@ -107,12 +107,12 @@ class SongInput extends React.Component {
                     <InputSelect
                         id="input-genre"
                         options={GenreData}
-                        onChange={this.handleGenreChange}
+                        onSelectChange={this.handleGenreChange}
                     />
                     <InputSelect
                         id="input-rating"
                         options={RatingData}
-                        onChange={this.handleRatingChange}
+                        onSelectChange={this.handleRatingChange}
                     />
                 </form>
                 <button
